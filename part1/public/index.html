@@ -65,7 +65,7 @@
                         }
                         const dogList = await resp.json();
                         console.log(`DogList is: ${dogList}`);
-                        const randomIndex = Math.floor(Math.random() * this.dogList.length);
+                        const randomIndex = Math.floor(Math.random() * dogList.length);
                         console.log(`Index is: ${randomIndex}`);
                         this.xanthorsStatistics = dogList[randomIndex].message;
                     } catch (error) {
