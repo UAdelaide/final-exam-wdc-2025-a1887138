@@ -200,25 +200,20 @@ app.get('/api/walkrequests/open', async (req, res) => {
   }
 });
 
-// Route to return open walk requests as JSON
+// Route to return a summary of walkers as JSON
 app.get('/api/walkrequests/open', async (req, res) => {
 
   try {
     const [dogs] = await db.execute(`
-      SELECT
-      WalkRequests.request_id,
-      Dogs.name,
-      WalkRequests.requested_time,
-      WalkRequests.duration_minutes,
-      WalkRequests.location,
-      Users.username
-      FROM
-      WalkRequests
-      INNER JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
-      INNER JOIN Users ON Dogs.owner_id = Users.user_id
-      WHERE
-      WalkRequests.Status = 'open'
-      ;
+        SELECT
+        Users.username,
+        COUNT(WalkRatings.rating) AS total_ratings,
+        AVG(WalkRatings.rating) AS average_rating,
+        COUNT(WalkRatings.rating_id) AS completed_walks
+        FROM WalkRatings
+        JOIN Users ON WalkRatings.walker_id = Users.user_id
+        GROUP BY Users.username
+        ;
       `);
     res.json(dogs);
   } catch (err) {
