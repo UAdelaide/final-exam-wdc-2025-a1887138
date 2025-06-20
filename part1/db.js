@@ -2,7 +2,7 @@ const mysql = require('mysql');
 
 let db;
 
-(async() => {
+(async () => {
     try {
 
         const connection = await mysql.createConnection({
