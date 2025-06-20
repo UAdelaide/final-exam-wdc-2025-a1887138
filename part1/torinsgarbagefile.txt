@@ -36,3 +36,8 @@ INNER JOIN Users ON Dogs.owner_id = Users.user_id
 WHERE
 WalkRequests.Status = 'open'
 ;
+
+SELECT
+Users.username
+
+
