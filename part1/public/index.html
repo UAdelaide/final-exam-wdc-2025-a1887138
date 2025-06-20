@@ -24,7 +24,7 @@
             data() {
                 return {
                     test: 'ageefqeegDreqem',
-                    items: []
+                    picture: ''
                 }
             },
             mounted() {
@@ -35,7 +35,7 @@
                             console.error(`Early error! Status: ${imgResp.status}`)
                         }
                         const imgFull = await imgResp.json()
-                        this
+                        this.picture = 
                     } catch (error) {
                         console.error(`Something went wrong with this error: ${error}`)
                     }
