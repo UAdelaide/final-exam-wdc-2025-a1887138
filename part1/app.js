@@ -126,17 +126,19 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
   try {
     const [dogs] = await db.execute(`
-      SELECT WalkRequests.request_id,
-      Dogs.name,
-      WalkRequests.requested_time,
-      WalkRequests.duration,
-      WalkRequests.location,
-      Users.username,
-      FROM WalkRequests
-      INNER JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
-      INNER JOIN Users ON Dogs.owner_id = Users.user_id
-      WHERE WalkRequests.Status = 'open'
-      ;
+SELECT
+  WalkRequests.request_id,
+  Dogs.name,
+  WalkRequests.requested_time,
+  WalkRequests.duration,
+  WalkRequests.location,
+  Users.username
+FROM
+  WalkRequests
+  INNER JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
+  INNER JOIN Users ON Dogs.owner_id = Users.user_id
+WHERE
+  WalkRequests.Status = 'open';
       `);
     res.json(dogs);
   } catch (err) {
