@@ -66,8 +66,8 @@
                         const dogList = await resp.json();
                         console.log(`DogList is: ${dogList}`);
                         const randomIndex = Math.floor(Math.random() * dogList.length);
-                        console.log(`Index is: ${randomIndex}`);
                         this.xanthorsStatistics = dogList[randomIndex].message;
+                        console.log(`Index is: ${xanthorsStatistics}`);
                     } catch (error) {
                         console.error(`Something went wrong with this error: ${error.message}`)
                     }
