@@ -24,7 +24,7 @@ let db;
     });
 
     // Create the database if it doesn't exist
-    await connection.query('CREATE DATABASE IF NOT EXISTS dogs');
+    await connection.query('CREATE DATABASE IF NOT EXISTS DogsList');
     await connection.end();
 
 
