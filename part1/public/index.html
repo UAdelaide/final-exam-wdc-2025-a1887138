@@ -24,15 +24,13 @@
         createApp({
             data() {
                 return {
-                    test: 'ageefqeegDreqem'
-                    items: [],
+                    test: 'ageefqeegDreqem',
+                    items: []
                 }
             },
             async mounted() {
-                var pictureRes = await fetch('https://dog.ceo/api/breeds/image/random')
-                console.log(`Gotten here with picture ${pictureRes}`);
-                picturehere = await pictureRes.json();
-                console.log(`Making jsony: ${picturehere}`);
+                const itemsRes = await fetch('/api/items');
+                this.items = await itemsRes.json();
             }
         }).mount('#app');
     </script>
