@@ -57,6 +57,17 @@ let db;
 
         const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
         if (rows[0].count === 0) {
+
+            await db.execute(`
+                INSERT INTO Dogs (owner_id, name, size)
+                VALUES
+                ('1', 'Max', 'medium'),
+                ('3', 'Bella', 'small'),
+                ('4', 'Gordon Ramsey 2', 'large'),
+                ('2', 'Whoodlegarden Pombungledungus', 'medium'),
+                ('5', 'Xanthor', 'medium');
+            `);
+
             await db.execute(`
                 INSERT INTO Dogs (owner_id, name, size)
                 VALUES
