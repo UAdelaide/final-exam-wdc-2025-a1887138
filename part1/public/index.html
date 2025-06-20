@@ -27,27 +27,12 @@
                     picture: 'm'
                 }
             },
-            methods:
+            methods: {
+
+            },
             mounted() {
                 console.log("testA");
-                async () => {
-                    console.log("testB");
-                    try {
-                        console.log("testC");
-                        const imgResp = await fetch("https://dog.ceo/api/breeds/image/random");
-                        if (!imgResp.ok) {
-                            console.error(`Early error! Status: ${imgResp.status}`);
-                        }
-                        const imgFull = await imgResp.json();
-                        this.picture = imgFull.message;
-                        console.log("test");
-                        console.log(imgFull);
-                        console.log(imgFull.message);
-                        console.log("test2");
-                    } catch (error) {
-                        console.error(`Something went wrong with this error: ${error.message}`)
-                    }
-                }
+                async () =>
             }
         }).mount('#app');
     </script>
