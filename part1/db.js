@@ -67,3 +67,5 @@ let db;
         console.error('Error setting up database! Error is as follows:', error);
     }
 })();
+
+module.exports = db;
