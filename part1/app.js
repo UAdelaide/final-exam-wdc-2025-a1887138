@@ -30,7 +30,7 @@ let db;
 
         db = await mysql.createConnection({
             host: 'localhost',
-            user: 'root',
+            // user: 'root',
             database: 'DogsDB'
         });
 
@@ -49,8 +49,8 @@ let db;
                 ('1984', 'George Orwell'),
                 ('To Kill a Mockingbird', 'Harper Lee'),
                 ('Brave New World', 'Aldous Huxley')
-                `);
-            }
+            `);
+        }
 
     } catch (error) {
 
