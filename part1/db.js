@@ -32,6 +32,7 @@ let connection;
             );
         `);
 
+        console.log("and here!");
 
         await db.execute(`
             CREATE TABLE IF NOT EXISTS Dogs (
@@ -42,6 +43,8 @@ let connection;
             FOREIGN KEY (owner_id) REFERENCES Users(user_id)
             );
         `);
+
+        console.log("and also here!");
 
         const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
         if (rows[0].count === 0) {
