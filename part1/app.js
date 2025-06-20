@@ -23,11 +23,9 @@ let db;
     host: 'localhost'
     });
 
-    // Create the database if it doesn't exist
     await connection.query('CREATE DATABASE IF NOT EXISTS DogsList');
     await connection.end();
 
-    // Now connect to the created database
     db = await mysql.createConnection({
         host: 'localhost',
         user: 'root',
