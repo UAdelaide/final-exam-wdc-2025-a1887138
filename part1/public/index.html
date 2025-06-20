@@ -59,15 +59,13 @@
 
                     try {
                         const resp = await fetch("/api/dogs");
-                        console.log(`Response is: ${resp}`);
                         if (!resp.ok) {
                             console.error(`Early error! Status: ${resp.status}`);
                         }
                         const dogList = await resp.json();
-                        console.log(`DogList is: ${dogList}`);
                         const randomIndex = Math.floor(Math.random() * dogList.length);
                         this.xanthorsStatistics = dogList[randomIndex].message;
-                        console.log(`Index is: ${xanthorsStatistics}`);
+                        console.log(`Stats are: ${xanthorsStatistics}`);
                     } catch (error) {
                         console.error(`Something went wrong with this error: ${error.message}`)
                     }
