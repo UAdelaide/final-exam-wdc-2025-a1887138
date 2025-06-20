@@ -31,8 +31,8 @@
                 async () => {
                     try {
                         const imgResp = await fetch("https://dog.ceo/api/breeds/image/random");
-                        if (!imgResp) {
-                            console.error(`Early error! Status: ${imgResp}`)
+                        if (!imgResp.ok) {
+                            console.error(`Early error! Status: ${imgResp.status}`)
                         }
                     } catch (error) {
                         console.error(`Something went wrong with this error: ${error}`)
