@@ -70,11 +70,13 @@ let connection;
             console.log("In theory, it should now be set up.");
         }
 
-        console.log("I'm making this really long so if there is a problem with async, this will be the thing that takes the longest and appears the");
+        console.log("F");
 
     } catch (error) {
         console.error('Error setting up database! Error is as follows:', error);
     }
 })();
+
+console.log("got here!");
 
 module.exports = connection;
