@@ -13,6 +13,7 @@
         </div>
 
         {{ test }}
+        {{ <picture></picture> }}
 
 
     </div>
@@ -30,7 +31,7 @@
             },
             async mounted() {
                 const pictureRes = fetch('https://dog.ceo/api/breeds/image/random');
-                this.picture = pictureRes
+                this.picture = pictureRes.json();
             }
         }).mount('#app');
     </script>
