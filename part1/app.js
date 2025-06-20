@@ -86,7 +86,7 @@ let db;
                 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments, rated_at)
                 VALUES
                 ('2', '1', '3', '5', 'bath needed after'),
-                ('1', '4', '3', '3'),
+                ('1', '4', '3', '3', 'What kinda McDonalds has a message?!'),
                 ('3', '2', '4', '5'),
                 ('4', '5', '2', '5'),
                 ('5', '3', '3', '1');
