@@ -16,10 +16,6 @@ VALUES
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
 VALUES
-INSERT INTO Dogs (owner_id, name, size)
-VALUES
-('1', 'Max', 'medium'),
-('3', 'Bella', 'small'),
-('4', 'Gordon Ramsey 2', 'large'),
-('2', 'Whoodlegarden Pombungledungus', 'medium'),
-('5', 'Xanthor', 'medium');
+(A request for Max at 2025-06-10 08:00:00 for 30 minutes at Parklands, with status open.)
+(A request for Bella at 2025-06-10 09:30:00 for 45 minutes at Beachside Ave, with status accepted.)
+
