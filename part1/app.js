@@ -177,7 +177,7 @@ app.get('/api/dogs', async (req, res) => {
 app.get('/api/dogs/combined', async (req, res) => {
   try {
     const [dogs] = await db.execute(`
-      SELECT Dogs. FROM Dogs
+      SELECT Dogs.name, Dogs.size FROM Dogs
       `);
     res.json(dogs);
   } catch (err) {
