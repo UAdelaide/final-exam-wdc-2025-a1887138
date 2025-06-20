@@ -126,7 +126,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
   try {
     const [dogs] = await db.execute(`
-      SELECT Dogs.dog_id, Dogs. FROM WalkRequests
+      SELECT WalkRequests.request_id, Dogs.name FROM WalkRequests
       INNER JOIN
 
       WHERE Status = 'open'
