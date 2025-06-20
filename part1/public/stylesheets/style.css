@@ -21,6 +21,6 @@ a {
 }
 
 #dog-image {
-  position: ;
+  display: flex;
   height:20cm;
 }
