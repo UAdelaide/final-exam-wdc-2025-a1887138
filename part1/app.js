@@ -201,7 +201,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 });
 
 // Route to return a summary of walkers as JSON
-app.get('/api/walkrequests/open', async (req, res) => {
+app.get('/api/walkers/summary', async (req, res) => {
 
   try {
     const [walkers] = await db.execute(`
