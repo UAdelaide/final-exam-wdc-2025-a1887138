@@ -68,7 +68,6 @@ let db;
                 ('4', '2028-06-20 16:00:00', '30', 'The Garden of Whoodle', 'open');
             `);
         }
-        }
         [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
         if (rows[0].count === 0) {
             await db.execute(`
