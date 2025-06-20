@@ -195,7 +195,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
       `);
     res.json(requests);
   } catch (err) {
-    res.status(500).json({ error: `Failed to fetch dogs with error ${err}` });
+    res.status(500).json({ error: `Failed to fetch requests with error ${err}` });
   }
 });
 
@@ -216,7 +216,7 @@ app.get('/api/walkers/summary', async (req, res) => {
       `);
     res.json(walkers);
   } catch (err) {
-    res.status(500).json({ error: `Failed to fetch dogs with error ${err}` });
+    res.status(500).json({ error: `Failed to fetch walkers with error ${err}` });
   }
 });
 
