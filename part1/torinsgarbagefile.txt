@@ -22,8 +22,8 @@ VALUES
 ('3', '2110-01-01 09:30:00', '45', 'A kitchen', 'completed'),
 ('4', '2028-06-20 16:00:00', '30', 'The Garden of Whoodle', 'open');
 
-      WalkRequests.request_id,
       SELECT
+      WalkRequests.request_id,
       Dogs.name,
       WalkRequests.requested_time,
       WalkRequests.duration_minutes,
@@ -36,8 +36,8 @@ VALUES
       WHERE
       WalkRequests.Status = 'open'
       ;
-      WalkRequests.request_id,
       SELECT
+      WalkRequests.request_id,
       Dogs.name,
       WalkRequests.requested_time,
       WalkRequests.duration,
