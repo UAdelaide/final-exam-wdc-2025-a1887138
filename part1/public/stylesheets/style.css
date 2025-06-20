@@ -26,4 +26,6 @@ a {
   width: 20cm;
 }
 
-#app
+#app {
+  margin: auto;
+}
