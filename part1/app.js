@@ -17,7 +17,7 @@ app.use(cookieParser());
 
 let db;
 
-(async() => {
+//(async() => {
     try {
 
         const connection = await mysql.createConnection({
@@ -75,7 +75,7 @@ let db;
     } catch (error) {
         console.error('Error setting up database! Error is as follows:', error);
     }
-})();
+//})();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
