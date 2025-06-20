@@ -85,11 +85,11 @@ let db;
             await db.execute(`
                 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments, rated_at)
                 VALUES
-                ('2', '1', '3', 'pending'),
-                ('1', '4', '3', 'accepted'),
-                ('3', '2', '4', 'pending'),
-                ('4', '5', '2', 'pending'),
-                ('5', '3', '3', 'rejected');
+                ('2', '1', '3', '5', 'bath needed after'),
+                ('1', '4', '3', '3'),
+                ('3', '2', '4', '5'),
+                ('4', '5', '2', '5'),
+                ('5', '3', '3', '1');
             `);
         }
 
