@@ -10,7 +10,7 @@ a {
 .grey-border {
   border: 2px solid #73828e;
   border-radius: 3px;
-  width: ;
+  width: 20cm;
 }
 
 .middle-bit {
@@ -23,5 +23,5 @@ a {
 
 #dog-image {
   display: flex;
-  height:20cm;
+  width: 20cm;
 }
