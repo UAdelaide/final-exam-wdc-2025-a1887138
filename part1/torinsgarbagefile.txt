@@ -16,4 +16,10 @@ VALUES
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
 VALUES
+INSERT INTO Dogs (owner_id, name, size)
+VALUES
 ('1', 'Max', 'medium'),
+('3', 'Bella', 'small'),
+('4', 'Gordon Ramsey 2', 'large'),
+('2', 'Whoodlegarden Pombungledungus', 'medium'),
+('5', 'Xanthor', 'medium');
