@@ -83,7 +83,7 @@ let db;
         [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
         if (rows[0].count === 0) {
             await db.execute(`
-                INSERT INTO WalkRatings (request_id, walker_id, applied_at, status)
+                INSERT INTO WalkRatings (request_id, applied_at, status)
                 VALUES
                 ('1', '2', '2028-06-20 13:00:00', 'pending'),
                 ('5', '2', '2024-06-20 16:00:00', 'accepted'),
