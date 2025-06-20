@@ -15,13 +15,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+(async() => {
+    
+})
+
 const db = mysql.createConnection({
     host: 'localhost'
 });
 
-    // Create the database if it doesn't exist
-    await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
-    await connection.end();
+// Create the database if it doesn't exist
+await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
+await connection.end();
 
 
 
