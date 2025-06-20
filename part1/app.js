@@ -87,7 +87,6 @@ let db;
 
 // Route to return dogs as JSON
 app.get('/api/dogs', async (req, res) => {
-  console.log(`DB is ${db}`);
 
   try {
     const [dogs] = await db.execute('SELECT * FROM Dogs');
