@@ -12,6 +12,7 @@ ul {
 }
 
 .grey-border {
+  position: relative;
   border: 2px solid #73828e;
   border-radius: 3px;
 }
