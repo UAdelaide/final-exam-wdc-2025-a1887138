@@ -130,9 +130,9 @@ app.get('/api/walkrequests/open', async (req, res) => {
       WalkRequests.request_id,
       Dogs.name,
       WalkRequests.requested_time,
-      WalkRequests.duration_minutes,
+      WalkRequests.duration,
       WalkRequests.location,
-      Users.username
+      Users.username,
       FROM
       WalkRequests
       INNER JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
