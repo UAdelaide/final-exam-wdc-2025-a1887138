@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 // Route to return books as JSON
-app.get('/', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const [books] = await db.execute('SELECT * FROM books');
     res.json(books);
