@@ -42,7 +42,7 @@ Users.username,
 COUNT(WalkRatings.rating) AS total_ratings,
 AVG(WalkRatings.rating) AS average_rating,
 COUNT(WalkRatings.rating_id) AS completed_walks
-FROM Ratings
-JOIN Users ON Ratings.walker_id = Users.user_id
+FROM WalkRatings
+JOIN Users ON WalkRatings.walker_id = Users.user_id
 ;
 
