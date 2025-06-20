@@ -13,3 +13,11 @@ VALUES
 ('4', 'Gordon Ramsey 2', 'large'),
 ('2', 'Whoodlegarden Pombungledungus', 'medium'),
 ('5', 'Xanthor', 'medium');
+
+INSERT INTO WalkRequests (owner_id, name, size)
+VALUES
+('1', 'Max', 'medium'),
+('3', 'Bella', 'small'),
+('4', 'Gordon Ramsey 2', 'large'),
+('2', 'Whoodlegarden Pombungledungus', 'medium'),
+('5', 'Xanthor', 'medium');
