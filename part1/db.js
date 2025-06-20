@@ -1,11 +1,12 @@
 var mysql = require('mysql2/promise');
 
 let db;
+let connection;
 
 (async () => {
     try {
 
-        const connection = await mysql.createConnection({
+        connection = await mysql.createConnection({
             host: 'localhost'
         });
 
