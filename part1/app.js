@@ -24,7 +24,7 @@ let db;
         });
 
         // Reset database
-        await connection.query('SOURCE part1/dogwalks.js');
+        await connection.query('source part1/dogwalks.sql;');
         await connection.end();
 
         db = await mysql.createConnection({
