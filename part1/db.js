@@ -19,6 +19,7 @@ let connection;
             database: 'DogsDB'
         });
 
+        console.log("got here!");
 
         await db.execute(`
             CREATE TABLE IF NOT EXISTS Users (
