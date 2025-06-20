@@ -73,11 +73,11 @@ let db;
             await db.execute(`
                 INSERT INTO WalkApplications (request_id, walker_id, applied_at, status)
                 VALUES
-                ('1', '2025-06-10 08:00:00', '30', 'Parklands', 'open'),
-                ('5', '2025-06-10 09:30:00', '45', 'Beachside Ave', 'accepted'),
-                ('4', '2025-06-20 16:00:00', '30', 'Ashton', 'open'),
-                ('3', '2110-01-01 09:30:00', '45', 'A kitchen', 'completed'),
-                ('4', '2028-06-20 16:00:00', '30', 'The Garden of Whoodle', 'open');
+                ('1', '2', '30', 'Parklands', 'open'),
+                ('5', '2', '45', 'Beachside Ave', 'accepted'),
+                ('4', '4', '30', 'Ashton', 'open'),
+                ('3', '4', '45', 'A kitchen', 'completed'),
+                ('4', '2', '30', 'The Garden of Whoodle', 'open');
             `);
         }
 
