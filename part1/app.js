@@ -42,9 +42,6 @@ let db;
             role ENUM('owner', 'walker') NOT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
-        `);
-
-        await db.execute(`
             CREATE TABLE IF NOT EXISTS Dogs (
             dog_id INT AUTO_INCREMENT PRIMARY KEY,
             owner_id INT NOT NULL,
