@@ -12,7 +12,7 @@
             <h1>Welcone to Intentionally Bad Website 4 Dog Walking</h1>
         </div>
 
-        <div v-model="test">Dog of the Day: {{ test.lol1 }}</div>
+        <div>Dog of the Day: {{ test.lol1 }}</div>
 
 
     </div>
@@ -21,9 +21,8 @@
         new Vue({
             el: "#app",
             data() {
-                let garbage = {"lol1":"lol2"}
                 return {
-                    test: garbage
+                    test: "garbage"
                 }
             }
         })
