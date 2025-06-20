@@ -23,13 +23,13 @@ let db;
     host: 'localhost'
     });
 
-    await connection.query('CREATE DATABASE IF NOT EXISTS DogsList');
+    await connection.query('CREATE DATABASE IF NOT EXISTS DogsDB');
     await connection.end();
 
     db = await mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        database: 'DogsList'
+        database: 'DogsDB'
     });
 
 })();
