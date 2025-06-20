@@ -95,4 +95,4 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', apiRouter);
 
-module.exports = app;
+module.exports = { app, connection };
