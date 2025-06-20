@@ -86,7 +86,7 @@ let db;
 })();
 
 // Route to return dogs as JSON
-app.get('/dogs', async (req, res) => {
+app.get('/api/dogs', async (req, res) => {
   console.log(`DB is ${db}`);
 
   try {
