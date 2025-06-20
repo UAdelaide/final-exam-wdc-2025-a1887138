@@ -10,9 +10,9 @@ router.get('/', function(req, res, next) {
 router.get('dogs', async (req, res) => {
   try {
     const [dogs] = await db.execute('SELECT * FROM dogs');
-    res.json(doigs);
+    res.json(dogs);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch books' });
+    res.status(500).json({ error: 'Failed to fetch dogs :(' });
   }
 });
 
