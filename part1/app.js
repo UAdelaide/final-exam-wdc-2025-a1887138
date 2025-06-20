@@ -77,7 +77,19 @@ let db;
                 ('5', '2', '2024-06-20 16:00:00', 'accepted'),
                 ('4', '4', '2022-01-20 11:00:00', 'pending'),
                 ('3', '4', '2021-08-20 19:00:00', 'pending'),
-                ('4', '2', '2029-10-20 00:00:01', 'open');
+                ('4', '2', '2029-10-20 00:00:01', 'rejected');
+            `);
+        }
+        [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkApplications');
+        if (rows[0].count === 0) {
+            await db.execute(`
+                INSERT INTO WalkApplications (request_id, walker_id, applied_at, status)
+                VALUES
+                ('1', '2', '2028-06-20 13:00:00', 'pending'),
+                ('5', '2', '2024-06-20 16:00:00', 'accepted'),
+                ('4', '4', '2022-01-20 11:00:00', 'pending'),
+                ('3', '4', '2021-08-20 19:00:00', 'pending'),
+                ('4', '2', '2029-10-20 00:00:01', 'rejected');
             `);
         }
 
