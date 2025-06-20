@@ -70,7 +70,7 @@ module.exports = (async () => {
             console.log("In theory, it should now be set up.");
         }
 
-        return connection;
+        return db;
 
     } catch (error) {
         console.error('Error setting up database! Error is as follows:', error);
