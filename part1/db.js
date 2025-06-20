@@ -3,7 +3,7 @@ var mysql = require('mysql2/promise');
 let db;
 var connection;
 
-(async () => {
+module.exports = (async () => {
     try {
 
         connection = await mysql.createConnection({
@@ -70,15 +70,9 @@ var connection;
             console.log("In theory, it should now be set up.");
         }
 
-        console.log("F");
-
-        console.log(connection);
+        return connection;
 
     } catch (error) {
         console.error('Error setting up database! Error is as follows:', error);
     }
 })();
-
-console.log(connection);
-
-module.exports = connection;
