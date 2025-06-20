@@ -30,7 +30,7 @@
             },
             async mounted() {
                 const pictureRes = await fetch('https://dog.ceo/api/breeds/image/random')
-                .then()
+                .then( json => this.pictureRes)
                 console.log(`Gotten here with picture ${pictureRes}`);
                 picturehere = await pictureRes.json();
                 console.log(`Making jsony: ${picturehere}`);
