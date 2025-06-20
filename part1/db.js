@@ -1,7 +1,7 @@
 var mysql = require('mysql2/promise');
 
 let db;
-let connection;
+var connection;
 
 (async () => {
     try {
@@ -77,6 +77,6 @@ let connection;
     }
 })();
 
-console.log("got here!");
+console.log(connection);
 
 module.exports = connection;
