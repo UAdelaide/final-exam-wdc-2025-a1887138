@@ -62,9 +62,9 @@ let connection;
                 ('2', 'Whoodlegarden Pombungledungus', 'medium'),
                 ('5', 'Xanthor', 'medium');
             `);
+            console.log("In theory, it should now be set up.");
         }
 
-        console.log("In theory, it should now be set up.");
 
     } catch (error) {
         console.error('Error setting up database! Error is as follows:', error);
