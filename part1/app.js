@@ -91,13 +91,13 @@ let db;
             `);
 
             await db.execute(`
-                INSERT INTO Dogs (owner_id, name, size)
+                INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
                 VALUES
-                ('1', 'Max', 'medium'),
-                ('3', 'Bella', 'small'),
-                ('4', 'Gordon Ramsey 2', 'large'),
-                ('2', 'Whoodlegarden Pombungledungus', 'medium'),
-                ('5', 'Xanthor', 'medium');
+                ('1', '2025-06-10 08:00:00', '30', 'Parklands', 'open'),
+                ('2', '2025-06-10 09:30:00', '45', 'Beachside Ave', 'accepted'),
+                ('5', '2025-06-20 16:00:00', '30', 'Ashton', 'open'),
+                ('3', '2110-01-01 09:30:00', '45', 'A kitchen', 'completed'),
+                ('4', '2028-06-20 16:00:00', '30', 'The Garden of Whoodle', 'open');
             `);
         }
 
