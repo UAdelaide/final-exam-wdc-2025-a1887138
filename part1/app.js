@@ -68,7 +68,7 @@ let db;
                 ('4', '2028-06-20 16:00:00', '30', 'The Garden of Whoodle', 'open');
             `);
         }
-        [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
+        [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkApplications');
         if (rows[0].count === 0) {
             await db.execute(`
                 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
