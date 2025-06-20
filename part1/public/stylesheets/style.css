@@ -1,5 +1,5 @@
 body {
-  display: flex;
+  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -25,3 +25,5 @@ a {
   display: flex;
   width: 20cm;
 }
+
+#app
