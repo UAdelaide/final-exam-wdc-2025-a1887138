@@ -93,7 +93,7 @@ let db;
         FOREIGN KEY (owner_id) REFERENCES Users(user_id),
         CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
         );
-      `);IF NOT EXISTS
+      `)
 
       var [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
       if (rows[0].count === 0) {
