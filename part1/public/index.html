@@ -54,9 +54,13 @@
                         console.error(`Something went wrong with this error: ${error.message}`)
                     }
                 }
+                async getXanthor() {
+                    
+                }
             },
             mounted() {
                 this.getImg();
+                this.getXanthor();
             }
         }).mount('#app');
     </script>
