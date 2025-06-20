@@ -17,5 +17,6 @@ ul {
 }
 
 .middle-bit {
-  position: absolute;
+  border: 2px solid #73828e;
+  border-radius: 3px;
 }
