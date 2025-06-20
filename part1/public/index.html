@@ -25,13 +25,13 @@
             data() {
                 return {
                     test: 'ageefqeegDreqem',
-                    picture: []
+                    picturehere: []
                 }
             },
             async mounted() {
                 const pictureRes = await fetch('https://dog.ceo/api/breeds/image/random');
                 console.log(`Gotten here with picture ${pictureRes}`);
-                const picture = await fetch('https://dog.ceo/api/breeds/image/random');
+                picturehere = await pictureRes.json();
                 console.log(`Grabbing from inside object: ${pictureRes.json()}`);
             }
         }).mount('#app');
