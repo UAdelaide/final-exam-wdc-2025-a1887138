@@ -28,11 +28,11 @@
                 }
             },
             mounted() {
-                console.log("test");
+                console.log("testA");
                 async () => {
-                    console.log("test");
+                    console.log("testB");
                     try {
-                        console.log("test");
+                        console.log("testC");
                         const imgResp = await fetch("https://dog.ceo/api/breeds/image/random");
                         if (!imgResp.ok) {
                             console.error(`Early error! Status: ${imgResp.status}`);
