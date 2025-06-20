@@ -63,7 +63,8 @@
                             console.error(`Early error! Status: ${imgResp.status}`);
                         }
                         const dogList = await resp.json();
-                        this.xanthorsStatistics = imgFull.message;
+                        this.xanthorsStatistics = dogList.message;
+                        const randomIndex = Math.floor(Math.random() * this.dogList.length);
                     } catch (error) {
                         console.error(`Something went wrong with this error: ${error.message}`)
                     }
