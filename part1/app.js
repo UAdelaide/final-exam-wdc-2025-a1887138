@@ -179,6 +179,7 @@ app.get('/api/dogs/combined', async (req, res) => {
     const [dogs] = await db.execute(`
       SELECT Dogs.name, Dogs.size, Users.username
       FROM Dogs
+      JOIN Users ON Dogs
       `);
     res.json(dogs);
   } catch (err) {
