@@ -85,10 +85,10 @@ let db;
             await db.execute(`
                 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments, rated_at)
                 VALUES
-                ('2', '3', '2028-06-20 13:00:00', 'pending'),
-                ('1', '3', '2024-06-20 16:00:00', 'accepted'),
-                ('3', '3', '2022-01-20 11:00:00', 'pending'),
-                ('4', '3', '2021-08-20 19:00:00', 'pending'),
+                ('2', '1', '2028-06-20 13:00:00', 'pending'),
+                ('1', '4', '2024-06-20 16:00:00', 'accepted'),
+                ('3', '2', '2022-01-20 11:00:00', 'pending'),
+                ('4', '5', '2021-08-20 19:00:00', 'pending'),
                 ('5', '3', '2029-10-20 00:00:01', 'rejected');
             `);
         }
