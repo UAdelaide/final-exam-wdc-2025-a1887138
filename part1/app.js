@@ -18,9 +18,11 @@ app.use(cookieParser());
 let db;
 
 (async() => {
+    try {
+
 
         const connection = mysql.createConnection({
-        host: 'localhost'
+            host: 'localhost'
         });
 
         await connection.query('CREATE DATABASE IF NOT EXISTS DogsDB');
@@ -34,22 +36,25 @@ let db;
 
         await db.execute(`
             CREATE TABLE IF NOT EXISTS dogs (
-            dog_id INT AUTO_INCREMENT PRIMARY KEY,
-            name VARCHAR(255),
-            author VARCHAR(255)
-            )
-        `);
+                dog_id INT AUTO_INCREMENT PRIMARY KEY,
+                name VARCHAR(255),
+                author VARCHAR(255)
+                )
+                `);
 
-        const [rows] = await db.execute('SELECT COUNT(*) AS count FROM ');
-        if (rows[0].count === 0) {
-        await db.execute(`
-            INSERT INTO books (title, author) VALUES
-            ('1984', 'George Orwell'),
-            ('To Kill a Mockingbird', 'Harper Lee'),
-            ('Brave New World', 'Aldous Huxley')
-        `);
-        }
+                const [rows] = await db.execute('SELECT COUNT(*) AS count FROM ');
+                if (rows[0].count === 0) {
+                    await db.execute(`
+                        INSERT INTO books (title, author) VALUES
+                        ('1984', 'George Orwell'),
+                        ('To Kill a Mockingbird', 'Harper Lee'),
+                        ('Brave New World', 'Aldous Huxley')
+                        `);
+                    }
 
+                } catch (error) {
+
+                }
 })();
 
 
