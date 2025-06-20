@@ -87,9 +87,9 @@ let db;
                 VALUES
                 ('2', '1', '3', '5', 'bath needed after', ),
                 ('1', '4', '3', '3', 'What kinda McDonalds has a message?!', ),
-                ('3', '2', '4', '5', "Smart Reference Joke", ),
-                ('4', '5', '2', '5', "not good, 0 star", ),
-                ('5', '3', '3', '1', "I am", );
+                ('3', '2', '4', '5', 'Smart Reference Joke', ),
+                ('4', '5', '2', '5', 'not good, 0 star', ),
+                ('5', '3', '3', '1', 'I am', );
             `);
         }
 
