@@ -174,7 +174,7 @@ app.get('/api/dogs', async (req, res) => {
 });
 
 // Route to return dog list joined with owner as JSON
-app.get('/api/dogs/shortened', async (req, res) => {
+app.get('/api/dogs/combined', async (req, res) => {
   try {
     const [dogs] = await db.execute(`
       SELECT Dogs.name, Dogs.size, Users.username
