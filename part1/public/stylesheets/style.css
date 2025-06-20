@@ -21,6 +21,6 @@ a {
 }
 
 #dog-image {
-  object-fit: cover;
-  max-height: ;
+  height:max-content;
+  max-height: 50%;
 }
