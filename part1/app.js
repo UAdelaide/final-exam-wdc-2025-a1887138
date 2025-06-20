@@ -20,7 +20,6 @@ let db;
 (async() => {
     try {
 
-
         const connection = mysql.createConnection({
             host: 'localhost'
         });
@@ -57,8 +56,8 @@ let db;
             `);
         }
 
-    } catch (err) {
-        console.error('Error setting up database! Error is as follows:', err);
+    } catch (error) {
+        console.error('Error setting up database! Error is as follows:', error);
     }
 })();
 
