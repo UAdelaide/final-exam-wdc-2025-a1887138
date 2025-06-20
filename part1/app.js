@@ -71,7 +71,7 @@ let db;
         [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkApplications');
         if (rows[0].count === 0) {
             await db.execute(`
-                INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+                INSERT INTO WalkRequests (application_id, request_id, walker_id, location, status)
                 VALUES
                 ('1', '2025-06-10 08:00:00', '30', 'Parklands', 'open'),
                 ('2', '2025-06-10 09:30:00', '45', 'Beachside Ave', 'accepted'),
