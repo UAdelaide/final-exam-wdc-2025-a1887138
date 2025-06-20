@@ -15,6 +15,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+let db;
+
 (async() => {
     try {
         const db = mysql.createConnection({
