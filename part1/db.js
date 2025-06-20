@@ -32,6 +32,7 @@ let connection;
             );
         `);
 
+
         await db.execute(`
             CREATE TABLE IF NOT EXISTS Dogs (
             dog_id INT AUTO_INCREMENT PRIMARY KEY,
