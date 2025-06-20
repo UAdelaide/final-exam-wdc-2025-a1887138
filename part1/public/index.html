@@ -59,6 +59,7 @@
 
                     try {
                         const resp = await fetch("/api/dogs");
+                        console.log("")
                         if (!resp.ok) {
                             console.error(`Early error! Status: ${resp.status}`);
                         }
