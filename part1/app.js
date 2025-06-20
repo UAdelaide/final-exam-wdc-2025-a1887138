@@ -43,7 +43,7 @@ let db;
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
             CREATE TABLE IF NOT EXISTS Dogs (
-            dog_id INT AUTO_INCREMENT PRIMARY KEY,
+            dog_id INT PRIMARY KEY,
             owner_id INT NOT NULL,
             name VARCHAR(50) NOT NULL,
             size ENUM('small', 'medium', 'large') NOT NULL,
