@@ -18,7 +18,7 @@ app.use(cookieParser());
 let db;
 
 (async() => {
-    try {
+
         const db = mysql.createConnection({
         host: 'localhost'
         });
@@ -26,9 +26,6 @@ let db;
         // Create the database if it doesn't exist
         await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
         await connection.end();
-    } catch (error) {
-
-    }
 })();
 
 
