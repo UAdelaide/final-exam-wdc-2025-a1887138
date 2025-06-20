@@ -29,7 +29,7 @@ let db;
     } catch (error) {
 
     }
-});
+})();
 
 
 
