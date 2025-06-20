@@ -12,4 +12,4 @@ VALUES
 ('3', 'Bella', 'small'),
 ('4', 'Gordon Ramsey 2', 'large'),
 ('2', 'Whoodlegarden Pombungledungus', 'medium'),
-('5', 'Xanthor', 'large');
+('5', 'Xanthor', 'medium');
