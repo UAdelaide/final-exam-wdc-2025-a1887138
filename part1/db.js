@@ -72,6 +72,8 @@ var connection;
 
         console.log("F");
 
+        console.log(connection);
+
     } catch (error) {
         console.error('Error setting up database! Error is as follows:', error);
     }
