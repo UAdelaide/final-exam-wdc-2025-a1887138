@@ -1,5 +1,5 @@
 body {
-  margin: 0 auto;
+  display: flex;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
