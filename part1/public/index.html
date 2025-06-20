@@ -37,7 +37,7 @@
                         const imgFull = await imgResp.json();
                         this.picture = imgFull.message;
                     } catch (error) {
-                        console.error(`Something went wrong with this error: ${error}`)
+                        console.error(`Something went wrong with this error: ${error.message}`)
                     }
                 }
             }
