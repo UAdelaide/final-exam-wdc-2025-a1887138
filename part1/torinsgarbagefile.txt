@@ -9,7 +9,7 @@ VALUES
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
 ('1', 'Max', 'medium'),
-('3', 'Max', 'medium'),
+('3', 'Bella', 'small'),
 ('1', 'Max', 'medium'),
 ('1', 'Max', 'medium'),
 ('1', 'Max', 'medium');
