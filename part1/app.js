@@ -126,7 +126,10 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
   try {
     const [dogs] = await db.execute(`
-      SELECT * FROM WalkRequests WHERE Status = 'open'
+      SELECT * FROM WalkRequests
+      INNER JOIN
+
+      WHERE Status = 'open'
       `);
     res.json(dogs);
   } catch (err) {
