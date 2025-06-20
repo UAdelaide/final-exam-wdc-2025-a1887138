@@ -16,9 +16,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    database
+    host: 'localhost'
 });
+
+    // Create the database if it doesn't exist
+    await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
+    await connection.end();
 
 
 
