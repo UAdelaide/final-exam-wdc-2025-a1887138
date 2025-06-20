@@ -39,6 +39,6 @@ WalkRequests.Status = 'open'
 
 SELECT
 Users.username,
-COUNT(WalkRatings)
+COUNT(WalkRatings.rating) AS total_ratings,
 
 
