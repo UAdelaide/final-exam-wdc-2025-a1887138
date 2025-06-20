@@ -6,11 +6,11 @@ router.get('/', function(req, res, next) {
   res.send('respond with a thingy');
 });
 
-// Route to return books as JSON
+// Route to return dogs as JSON
 router.get('dogs', async (req, res) => {
   try {
     const [dogs] = await db.execute('SELECT * FROM dogs');
-    res.json(books);
+    res.json(doigs);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch books' });
   }
