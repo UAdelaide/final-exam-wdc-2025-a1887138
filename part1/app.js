@@ -48,7 +48,7 @@ let db;
             name VARCHAR(50) NOT NULL,
             size ENUM('small', 'medium', 'large') NOT NULL,
             FOREIGN KEY (owner_id) REFERENCES Users(user_id)
-            )
+            );
         `);
 
         const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
