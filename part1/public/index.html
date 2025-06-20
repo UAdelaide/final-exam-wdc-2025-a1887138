@@ -34,6 +34,7 @@
                         if (!imgResp.ok) {
                             console.error(`Early error! Status: ${imgResp.status}`)
                         }
+                        const imgFull = await
                     } catch (error) {
                         console.error(`Something went wrong with this error: ${error}`)
                     }
