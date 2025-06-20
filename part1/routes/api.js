@@ -1,7 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-// const db = require('../db');
+db = mysql.createConnection({
+    host: 'localhost',
+    // user: 'root',
+    database: 'DogsDB'
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
