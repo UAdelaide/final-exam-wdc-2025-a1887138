@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var mysql = require('mysql2/promise');
 
-db = mysql.createConnection({
+const db = mysql.createConnection({
     host: 'localhost',
     // user: 'root',
     database: 'DogsDB'
