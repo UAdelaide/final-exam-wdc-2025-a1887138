@@ -17,10 +17,10 @@ app.use(cookieParser());
 
 let db;
 
-(async () => {
+(async() => {
     try {
 
-        connection = await mysql.createConnection({
+        const connection = await mysql.createConnection({
             host: 'localhost'
         });
 
@@ -29,11 +29,10 @@ let db;
 
         db = await mysql.createConnection({
             host: 'localhost',
-            user: 'root',
+            // user: 'root',
             database: 'DogsDB'
         });
 
-        console.log("got here!");
 
         await db.execute(`
             CREATE TABLE IF NOT EXISTS Users (
@@ -46,8 +45,6 @@ let db;
             );
         `);
 
-        console.log("and here!");
-
         await db.execute(`
             CREATE TABLE IF NOT EXISTS Dogs (
             dog_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -57,8 +54,6 @@ let db;
             FOREIGN KEY (owner_id) REFERENCES Users(user_id)
             );
         `);
-
-        console.log("and also here!");
 
         const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
         if (rows[0].count === 0) {
@@ -81,7 +76,6 @@ let db;
                 ('2', 'Whoodlegarden Pombungledungus', 'medium'),
                 ('5', 'Xanthor', 'medium');
             `);
-            console.log("In theory, it should now be set up.");
         }
 
     } catch (error) {
@@ -95,4 +89,4 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', apiRouter);
 
-module.exports = { app, db };
+module.exports = app;
