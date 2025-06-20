@@ -85,9 +85,9 @@ let db;
             await db.execute(`
                 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments, rated_at)
                 VALUES
-                ('2', '1', '3', '5', 'bath needed after', '2029-10-22 00:00:01'),
-                ('1', '4', '3', '3', 'What kinda McDonalds has a message?!', '2029-10-20 00:00:01'),
-                ('3', '2', '4', '5', 'Smart Reference Joke', '2026-10-21 00:00:01'),
+                ('2', '1', '3', '5', 'bath needed after', '2029-10-22 05:00:01'),
+                ('1', '4', '3', '3', 'What kinda McDonalds has a message?!', '2029-10-20 20:00:01'),
+                ('3', '2', '4', '5', 'Smart Reference Joke', '2026-10-21 00:06:01'),
                 ('4', '5', '2', '5', 'not good, 0 star', '2059-10-20 00:00:01'),
                 ('5', '3', '3', '1', 'I am', '2023-10-20 00:00:01');
             `);
