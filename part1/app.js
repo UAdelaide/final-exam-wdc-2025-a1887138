@@ -178,7 +178,7 @@ app.get('/api/dogs', async (req, res) => {
 app.get('/api/walkrequests/open', async (req, res) => {
 
   try {
-    const [dogs] = await db.execute(`
+    const [requests] = await db.execute(`
       SELECT
       WalkRequests.request_id,
       Dogs.name,
@@ -194,7 +194,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
       WalkRequests.Status = 'open'
       ;
       `);
-    res.json(dogs);
+    res.json(requests);
   } catch (err) {
     res.status(500).json({ error: `Failed to fetch dogs with error ${err}` });
   }
@@ -204,7 +204,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 app.get('/api/walkrequests/open', async (req, res) => {
 
   try {
-    const [dogs] = await db.execute(`
+    const [walkers] = await db.execute(`
         SELECT
         Users.username,
         COUNT(WalkRatings.rating) AS total_ratings,
@@ -215,7 +215,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
         GROUP BY Users.username
         ;
       `);
-    res.json(dogs);
+    res.json(walkers);
   } catch (err) {
     res.status(500).json({ error: `Failed to fetch dogs with error ${err}` });
   }
