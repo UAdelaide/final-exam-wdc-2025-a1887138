@@ -8,7 +8,7 @@ VALUES
 
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
-('1', 'alice@example.com', 'hashed123'),
+('1', 'Max', 'Medium'),
 ('bobwalker', 'bob@example.com', 'hashed456'),
 ('carol123', 'carol@example.com', 'hashed789'),
 ('de_nice', 'dennis@example.com', 'hashed111'),
