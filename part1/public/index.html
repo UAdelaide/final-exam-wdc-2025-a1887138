@@ -12,7 +12,7 @@
             <h1>Welcone to Intentionally Bad Website 4 Dog Walking</h1>
         </div>
 
-        <div>Dog of the Day: {{ test.lol1 }}</div>
+        {{ garbage }}
 
 
     </div>
@@ -22,7 +22,7 @@
         CreateApp({
             data() {
                 return {
-                    test: {"lol1":"lol2"}
+                    test: "garbage"
                 }
             }
         }).mount('#app');
