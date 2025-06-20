@@ -24,7 +24,7 @@ let db;
         });
 
         // Reset database
-        await connection.query('CREATE DATABASE IF NOT EXISTS DogsDB');
+        await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
         await connection.end();
 
         db = await mysql.createConnection({
