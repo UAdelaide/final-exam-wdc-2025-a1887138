@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 const db = mysql.createConnection({
+    host: 'localhost',
     
 });
 
