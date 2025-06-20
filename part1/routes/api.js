@@ -14,15 +14,15 @@ router.get('/', function(req, res, next) {
 });
 
 // Route to return dogs as JSON
-router.get('/dogs', async (req, res) => {
-  console.log(`DB is ${db}`);
+// router.get('/dogs', async (req, res) => {
+//   console.log(`DB is ${db}`);
 
-  try {
-    const [dogs] = await db.execute('SELECT * FROM dogs');
-    res.json(dogs);
-  } catch (err) {
-    res.status(500).json({ error: `Failed to fetch dogs with error ${err}` });
-  }
-});
+//   try {
+//     const [dogs] = await db.execute('SELECT * FROM dogs');
+//     res.json(dogs);
+//   } catch (err) {
+//     res.status(500).json({ error: `Failed to fetch dogs with error ${err}` });
+//   }
+// });
 
 module.exports = router;

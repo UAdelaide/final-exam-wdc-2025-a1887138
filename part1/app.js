@@ -85,6 +85,18 @@ let db;
     }
 })();
 
+// Route to return dogs as JSON
+app.get('/dogs', async (req, res) => {
+  console.log(`DB is ${db}`);
+
+  try {
+    const [dogs] = await db.execute('SELECT * FROM dogs');
+    res.json(dogs);
+  } catch (err) {
+    res.status(500).json({ error: `Failed to fetch dogs with error ${err}` });
+  }
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
