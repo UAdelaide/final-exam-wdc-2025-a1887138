@@ -58,14 +58,13 @@
                     // Incase it wasn't clear, Xanthor is my dog :)
 
                     try {
-                        const resp = await fetch("/api/dogs");
+                        const resp = await fetch("/api/dogs/combined");
                         if (!resp.ok) {
                             console.error(`Early error! Status: ${resp.status}`);
                         }
                         const dogList = await resp.json();
                         const randomIndex = Math.floor(Math.random() * dogList.length);
                         this.xanthorsStatistics = dogList[randomIndex];
-                        console.log(`Stats are: ${xanthorsStatistics}`);
                     } catch (error) {
                         console.error(`Something went wrong with this error: ${error.message}`)
                     }
