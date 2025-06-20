@@ -35,12 +35,12 @@ let db;
         });
 
         await db.execute(`
-            CREATE TABLE IF NOT EXISTS dogs (
-                dog_id INT AUTO_INCREMENT PRIMARY KEY,
-                name VARCHAR(255),
-                author VARCHAR(255)
-                )
-                `);
+        CREATE TABLE IF NOT EXISTS dogs (
+            dog_id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(255),
+            author VARCHAR(255)
+            )
+            `);
 
                 const [rows] = await db.execute('SELECT COUNT(*) AS count FROM ');
                 if (rows[0].count === 0) {
@@ -52,9 +52,9 @@ let db;
                         `);
                     }
 
-                } catch (error) {
+    } catch (error) {
 
-                }
+    }
 })();
 
 
