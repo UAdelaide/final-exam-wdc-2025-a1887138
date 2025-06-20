@@ -78,6 +78,8 @@ let db;
             `);
         }
 
+        console.log("Finished setup");
+
     } catch (error) {
         console.error('Error setting up database! Error is as follows:', error);
     }
