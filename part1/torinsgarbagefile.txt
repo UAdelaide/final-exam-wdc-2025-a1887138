@@ -14,7 +14,7 @@ VALUES
 ('2', 'Whoodlegarden Pombungledungus', 'medium'),
 ('5', 'Xanthor', 'medium');
 
-INSERT INTO WalkRequests (dog_id, name, size)
+INSERT INTO WalkRequests (dog_id, requested_time, size)
 VALUES
 ('1', 'Max', 'medium'),
 ('3', 'Bella', 'small'),
