@@ -11,5 +11,5 @@ VALUES
 ('1', 'Max', 'medium'),
 ('3', 'Bella', 'small'),
 ('4', 'Gordon Ramsey 2', 'large'),
-('2', 'Whoodlegarden', 'medium'),
-('5', 'Xanthor', 'medium');
+('2', 'Whoodlegarden Pombungledungus', 'medium'),
+('5', 'Xanthor', 'large');
