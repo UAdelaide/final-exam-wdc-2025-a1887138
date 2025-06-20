@@ -13,12 +13,12 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
 
-    <form action="/auth" method="post">
-      <label class="login-content" for="username">Username</label>
-      <input class="login-content" type="text" name="username" id="username" required>
-      <label class="login-content" for="username">Password</label>
-      <input class="login-content" type="password" name="password" id="password" required>
-      <input class="login-content" type="submit" value="login">
+    <form class="login-content" action="/auth" method="post">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" required>
+      <label for="username">Password</label>
+      <input type="password" name="password" id="password" required>
+      <input type="submit" value="login">
     </form>
 
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
