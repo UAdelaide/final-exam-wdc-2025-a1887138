@@ -160,5 +160,6 @@ section {
     padding: 15px 20px;
     margin: 8px 0px;
     display: inline-block;
-    
+    border-radius: 3px;
+    box-sizing: border-box;
 }
