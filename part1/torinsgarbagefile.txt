@@ -18,4 +18,6 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 VALUES
 (1, '2025-06-10 08:00:00', '30', 'Parklands, 'open')
 (2, '2025-06-10 09:30:00', '45', 'Beachside Ave, 'accepted')
-
+(5, '2025-06-10 08:00:00', '30', 'Parklands, 'open')
+(3, '2025-06-10 09:30:00', '45', 'Beachside Ave, 'accepted')
+(4, '2025-06-10 08:00:00', '30', 'Parklands, 'open')
