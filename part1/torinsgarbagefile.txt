@@ -41,6 +41,8 @@ SELECT
 Users.username,
 COUNT(WalkRatings.rating) AS total_ratings,
 AVG(WalkRatings.rating) AS average_rating,
-COUNT(WalkRatings.rating_id)
+COUNT(WalkRatings.rating_id) AS completed_walks
+FROM
+WalkRatings
 
 
