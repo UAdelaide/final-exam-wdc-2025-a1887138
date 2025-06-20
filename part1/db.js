@@ -70,6 +70,7 @@ let connection;
             console.log("In theory, it should now be set up.");
         }
 
+        console.log("got here!");
 
     } catch (error) {
         console.error('Error setting up database! Error is as follows:', error);
