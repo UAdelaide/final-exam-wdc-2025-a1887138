@@ -79,6 +79,9 @@ let db;
                 ('de_nice', 'dennis@example.com', 'hashed111', 'walker'),
                 ('ayayron', 'aaron@example.com', 'hashed666', 'owner');
             `);
+        }
+        const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+        if (rows[0].count === 0) {
 
             await db.execute(`
                 INSERT INTO Dogs (owner_id, name, size)
