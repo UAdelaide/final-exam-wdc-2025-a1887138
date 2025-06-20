@@ -76,6 +76,16 @@ let db;
                 ('2', 'Whoodlegarden Pombungledungus', 'medium'),
                 ('5', 'Xanthor', 'medium');
             `);
+
+            await db.execute(`
+                INSERT INTO Dogs (owner_id, name, size)
+                VALUES
+                ('1', 'Max', 'medium'),
+                ('3', 'Bella', 'small'),
+                ('4', 'Gordon Ramsey 2', 'large'),
+                ('2', 'Whoodlegarden Pombungledungus', 'medium'),
+                ('5', 'Xanthor', 'medium');
+            `);
         }
 
         console.log("Finished setup");
@@ -108,7 +118,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 });
 
 // Route to return dogs as JSON
-app.get('/api/dogs', async (req, res) => {
+app.get('/api/walkers/summary', async (req, res) => {
 
   try {
     const [dogs] = await db.execute('SELECT * FROM Dogs');
