@@ -174,7 +174,7 @@ app.get('/api/dogs', async (req, res) => {
 });
 
 // Route to return dog owner as JSON
-app.get('/api/dog/', async (req, res) => {
+app.get('/api/dog', async (req, res) => {
   try {
     const [dogs] = await db.execute('SELECT * FROM Dogs');
     res.json(dogs);
