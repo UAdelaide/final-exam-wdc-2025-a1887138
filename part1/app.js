@@ -34,7 +34,6 @@ let db;
         });
 
 
-        console.log("Part 1");
         await db.execute(`
             CREATE TABLE IF NOT EXISTS Users (
             user_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -45,9 +44,7 @@ let db;
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
         `);
-        console.log("Part 2");
 
-        console.log("Part 3");
         await db.execute(`
             CREATE TABLE IF NOT EXISTS Dogs (
             dog_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -57,7 +54,6 @@ let db;
             FOREIGN KEY (owner_id) REFERENCES Users(user_id)
             );
         `);
-        console.log("Part 4");
 
         const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
         if (rows[0].count === 0) {
