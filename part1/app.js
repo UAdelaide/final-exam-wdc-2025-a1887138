@@ -92,7 +92,7 @@ let db;
                 ('5', 'Xanthor', 'medium');
             `);
         }
-        [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+        [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
         if (rows[0].count === 0) {
             await db.execute(`
                 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
