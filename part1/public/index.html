@@ -64,6 +64,7 @@
                             console.error(`Early error! Status: ${resp.status}`);
                         }
                         const dogList = await resp.json();
+                        console.log(`DogList is: ${resp}`);
                         const randomIndex = Math.floor(Math.random() * this.dogList.length);
                         this.xanthorsStatistics = dogList[randomIndex].message;
                     } catch (error) {
