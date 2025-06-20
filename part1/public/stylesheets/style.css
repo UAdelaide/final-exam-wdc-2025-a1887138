@@ -8,5 +8,6 @@ a {
 }
 
 .grey_border {
-  border: #73828e;
+  border: 2px solid #73828e;
+  border-radius: ;
 }
