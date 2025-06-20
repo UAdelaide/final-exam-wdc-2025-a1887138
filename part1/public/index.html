@@ -29,7 +29,7 @@
                 }
             },
             async mounted() {
-                const pictureRes = await fetch('https://dog.ceo/api/breeds/image/random');
+                const pictureRes = await fetch('https://dog.ceo/api/breeds/image/random')
                 console.log(`Gotten here with picture ${pictureRes}`);
                 picturehere = await pictureRes.json();
                 console.log(`Making jsony: ${picturehere}`);
