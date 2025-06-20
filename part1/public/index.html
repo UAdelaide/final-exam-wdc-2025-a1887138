@@ -31,8 +31,7 @@
             async mounted() {
                 const pictureRes = await fetch('https://dog.ceo/api/breeds/image/random');
                 console.log(`Gotten here with picture ${pictureRes}`);
-                this.picture = pictureRes.json();
-                console.log(`Grabbing from inside object: ${picture.status}`);
+                console.log(`Grabbing from inside object: ${pictureRes.status}`);
             }
         }).mount('#app');
     </script>
