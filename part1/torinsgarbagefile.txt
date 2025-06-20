@@ -38,6 +38,7 @@ WalkRequests.Status = 'open'
 ;
 
 SELECT
-Users.username
+Users.username,
+COUNT(WalkRatings)
 
 
