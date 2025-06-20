@@ -32,7 +32,7 @@
                     try {
                         const imgResp = await fetch("https://dog.ceo/api/breeds/image/random");
                         if (!imgResp) {
-                            console.error()
+                            console.error(`Early error! Status: ${imgResp}`)
                         }
                     } catch (error) {
                         console.error(`Something went wrong with this error: ${error}`)
