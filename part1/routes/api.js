@@ -15,6 +15,7 @@ router.get('/', function(req, res, next) {
 
 // Route to return dogs as JSON
 router.get('/dogs', async (req, res) => {
+  console.log(`${db}`)
   try {
     const [dogs] = await db.execute('SELECT * FROM dogs');
     res.json(dogs);
