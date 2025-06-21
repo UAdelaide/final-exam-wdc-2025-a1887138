@@ -19,6 +19,16 @@ app.use(session({
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
+// Route to return dogs as JSON
+app.get('/api/dogs', async (req, res) => {
+  try {
+    const [dogs] = await db.execute('SELECT * FROM Dogs');
+    res.json(dogs);
+  } catch (err) {
+    res.status(500).json({ error: `Failed to fetch dogs with error ${err}` });
+  }
+});
+
 app.use((req, res, next) => {
     // We need SOME available paths. These are they.
     const publicPaths = ["", "/","/api/users/login"];
@@ -36,16 +46,6 @@ app.use((req, res, next) => {
     console.log(req.session.role);
 
     return next();
-});
-
-// Route to return dogs as JSON
-app.get('/api/dogs', async (req, res) => {
-  try {
-    const [dogs] = await db.execute('SELECT * FROM Dogs');
-    res.json(dogs);
-  } catch (err) {
-    res.status(500).json({ error: `Failed to fetch dogs with error ${err}` });
-  }
 });
 
 app.use('/api/walks', walkRoutes);
