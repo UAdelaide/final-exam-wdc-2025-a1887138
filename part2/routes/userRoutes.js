@@ -39,7 +39,7 @@ router.get('/me', (req, res) => {
 
 // POST login (un-dummy version)
 router.post('/login', async (req, res) => {
-  // Only email and password necessary for this function, oddly
+  // Init
   const { email, password } = req.body;
 
   try {
