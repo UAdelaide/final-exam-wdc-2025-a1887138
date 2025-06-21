@@ -173,5 +173,6 @@ section {
 
 .logout {
     position:absolute;
-    top0;
+    top: 0;
+    right: 0;
 }
