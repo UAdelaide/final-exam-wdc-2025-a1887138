@@ -132,7 +132,7 @@
           const response = await fetch('api/users/logout', {
             method: 'GET'
           }).then(res => {
-            
+            window.location.href = '/';
           })
         }
       }
