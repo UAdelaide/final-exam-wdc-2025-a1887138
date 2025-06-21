@@ -29,6 +29,8 @@ app.use((req, res, next) => {
         return res.redirect(307, '/');
     }
 
+    console.log(req.session.role);
+
     return next();
 });
 
