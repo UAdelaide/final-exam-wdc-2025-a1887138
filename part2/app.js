@@ -19,9 +19,9 @@ app.use(session({
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
-app.use(req, res, next) => {
+app.use((req, res, next) => {
     const publicPaths = ["/","/api/users/auth"];
-};
+});
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
