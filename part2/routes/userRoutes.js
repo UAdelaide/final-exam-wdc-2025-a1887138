@@ -54,10 +54,10 @@ router.post('/login', async (req, res) => {
 
     if (role === "walker") {
       req.session.role = 'walker';
-      res.redirect("/owner-dashboard.html");
+      res.redirect("/walker-dashboard.html");
     } else if (role === "owner") {
       req.session.role = 'owner';
-      res.redirect("/walker-dashboard.html");
+      res.redirect("/owner-dashboard.html");
     } else {
       res.status(500).json({ error: 'Server Error' });
     }
