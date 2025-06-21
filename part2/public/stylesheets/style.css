@@ -155,7 +155,10 @@ section {
     display: none;
 }
 
+.login-content label {
+    width: 100%;
+}
+
 .login-content {
     display: block;
-
 }
