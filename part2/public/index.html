@@ -55,6 +55,7 @@
             credentials:"include" // Because we will be using cookies !!!
           })
           .then(res => {
+            // Force follow all redirects
             if (res.redirected) {
               window.location.href = res.url;
             }
