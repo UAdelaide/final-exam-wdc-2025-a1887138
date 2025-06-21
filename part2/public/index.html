@@ -59,7 +59,7 @@
                     console.error(`Early error! Status: ${imgResp.status}`);
                 }
                 const imgFull = await imgResp.json();
-                this.picture = imgFull.message;
+                this.picture += imgFull.message;
             } catch (error) {
                 console.error(`Something went wrong with this error: ${error.message}`)
             }
