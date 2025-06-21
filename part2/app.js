@@ -25,7 +25,8 @@ app.use((req, res, next) => {
 
     if (!loggedInAs && !publicPaths.includes(req.path)) {
         // Not using a view engine, so stopping just straight connections to .html pages...
-        // ... won't happen, but the functionality of those pages is gone. All 
+        // ... won't happen, but the functionality of those pages is gone. All...
+        // ... unauthorized accessing of 
         console.log(`Attempted access of unauthorized place! Path: ${req.path}`);
         return res.redirect(307, '/');
     }
