@@ -20,7 +20,7 @@ const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
 app.use((req, res, next) => {
-    // 
+    // We need SOME available paths. These are they.
     const publicPaths = ["", "/","/api/users/login"];
     const loggedInAs = req.session.role;
 
