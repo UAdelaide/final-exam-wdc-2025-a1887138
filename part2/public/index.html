@@ -55,7 +55,7 @@
           })
           .then(res => {
             if (res.redirected) {
-              window.location.
+              window.location.href = res.url;
             }
           });
           if (!response.ok) {
