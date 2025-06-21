@@ -9,7 +9,8 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(session({
-    secret: "So secret even I'll forget this";
+    secret: 'So secret even I will forget this',
+    
 }))
 
 // Routes
