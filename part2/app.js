@@ -24,7 +24,7 @@ app.use((req, res, next) => {
     const loggedInAs = req.session.role;
 
     if (!loggedInAs && !publicPaths.includes(req.path)) {
-        // Not logged in, tried to access a logged in place
+        // This
         console.log(`Attempted access of unauthorized place! Path: ${req.path}`);
         return res.redirect(307, '/');
     }
