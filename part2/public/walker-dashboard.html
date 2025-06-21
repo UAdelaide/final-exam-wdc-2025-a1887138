@@ -85,6 +85,21 @@
           error,
           applyToWalk
         };
+      },
+      methods: {
+        async function getCurrentUser() {
+          try {
+            const resp = await fetch('/api/users/me');
+            if (!resp.ok) {
+              throw new Error('Failed to load user data');
+            }
+            this.user = await resp.json();
+            console.log(user);
+            console.log("ohegir");
+          } catch (err) {
+            error.value = err.message;
+          }
+        }
       }
     }).mount('#app');
   </script>
