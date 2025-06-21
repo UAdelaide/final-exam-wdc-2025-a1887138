@@ -80,7 +80,7 @@ router.get('/logout', async (req, res) => {
 router.post('/logout', async (req, res) => {
   try {
     const [rows] = await db.query(`
-      SELECT user_id, username, role FROM Users
+      SELECT dog_id, name, role FROM Dogs
       WHERE email = ? AND password_hash = ?
     `, [email, password]);
   } catch (error) {
