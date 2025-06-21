@@ -45,7 +45,17 @@
         const error = ref('');
         const user = null;
 
-        async function getCurrentUser() {
+        async function loadWalkRequests() {
+          try {
+            const res = await fetch('/api/walks');
+            if (!res.ok) throw new Error('Failed to load walk requests');
+            walks.value = await res.json();
+          } catch (err) {
+            error.value = err.message;
+          }
+        }
+
+                async function getCurrentUser() {
           try {
             const resp = await fetch('/api/users/me');
             if (!resp.ok) {
@@ -54,16 +64,6 @@
             this.user = await resp.json();
             console.log(user);
             console.log("ohegir");
-          } catch (err) {
-            error.value = err.message;
-          }
-        }
-
-        async function loadWalkRequests() {
-          try {
-            const res = await fetch('/api/walks');
-            if (!res.ok) throw new Error('Failed to load walk requests');
-            walks.value = await res.json();
           } catch (err) {
             error.value = err.message;
           }
