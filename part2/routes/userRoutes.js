@@ -31,7 +31,8 @@ router.post('/register', async (req, res) => {
 
 router.get('/me', (req, res) => {
   console.log(`Over here! ${req.session}`);
-  console.log(`Over here! ${req.session}`);
+  console.log(`Over here! ${req.session.user}`);
+  console.log(`Over here! ${req.session.user_id}`);
   if (!req.session.user) {
     return res.status(401).json({ error: 'Not logged in' });
   }
