@@ -44,7 +44,9 @@
       },
       methods: {
         async submitLogin() {
-          const response = await fetch('/api/')
+          const response = await fetch('/api/users/login', {
+            
+          })
         }
       }
     }).mount('#app');
