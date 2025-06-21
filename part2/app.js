@@ -8,8 +8,8 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.post('', async () => {
-
+app.post('', async (req, res) => {
+    
 });
 
 
