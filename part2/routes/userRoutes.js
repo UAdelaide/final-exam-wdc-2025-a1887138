@@ -52,7 +52,8 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    // I realise this is a weird way of keeping and accessing data in rows.
+    // I realise this is a weird way of keeping and accessing data in rows, but I don't have time...
+    // ... to make it pretty, just functional.
     const role = rows[0].role;
     const user = rows[0].user_id;
 
