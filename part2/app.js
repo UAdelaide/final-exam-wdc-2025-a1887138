@@ -21,6 +21,7 @@ const userRoutes = require('./routes/userRoutes');
 
 app.use((req, res, next) => {
     const publicPaths = ["/","/api/users/login"];
+    const loggedIn = 
 });
 
 app.use('/api/walks', walkRoutes);
