@@ -173,7 +173,7 @@ section {
 
 .logout {
     position: absolute;
-    float: right;
+    align-self:;
 }
 
 .flexy {
