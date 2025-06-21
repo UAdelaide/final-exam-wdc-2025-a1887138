@@ -85,7 +85,7 @@ router.post('/dogs', async (req, res) => {
       SELECT dog_id, name FROM Dogs
       WHERE owner_id = ?
     `, [owner_id]);
-    
+    res.json(rows);
   } catch (error) {
     console.error(error);
   }
