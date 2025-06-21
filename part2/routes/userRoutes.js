@@ -69,13 +69,8 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/logout', async (req, res) => {
-  req.session.destroy(err => {
-    if (err) {
-      console.error(err);
-    } else {
-      res.status(200);
-    }
-  });
+  req.session.destroy
+  res.status(200);
 });
 
 module.exports = router;
