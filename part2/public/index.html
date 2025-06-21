@@ -17,11 +17,11 @@
     <form action="api/users/login" method="POST">
       <div class="login-content">
         <label for="username">Username</label>
-        <input v-model="" type="text" name="username" id="username" required>
+        <input v-model="email" type="text" name="username" id="username" required>
       </div>
       <div class="login-content">
         <label for="password">Password</label>
-        <input v-model="" type="password" name="password" id="password" required>
+        <input v-model="password" type="password" name="password" id="password" required>
       </div>
       <div class="login-content">
         <input type="submit" value="Log In">
