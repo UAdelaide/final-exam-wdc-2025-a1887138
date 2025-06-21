@@ -170,3 +170,8 @@ section {
     border-color: rgb(0, 149, 255);
     border-radius: 5px;
 }
+
+.logout {
+    position:absolute;
+    top0;
+}
