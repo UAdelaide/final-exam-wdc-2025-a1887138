@@ -164,7 +164,7 @@ section {
 }
 
 .login-content input[type="submit"] {
-    shad
+    box-shadow: none;
     max-width: fit-content;
     color: white;
     background-color: rgb(0, 149, 255);
