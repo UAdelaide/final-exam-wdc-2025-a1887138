@@ -46,10 +46,10 @@
         async submitLogin() {
           const response = await fetch('/api/users/login', {
             method: 'POST',
-            headers: {'Content-Type':'application/json'}
+            headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
               email: this.email,
-              body: this
+              password: this.password
             })
           })
         }
