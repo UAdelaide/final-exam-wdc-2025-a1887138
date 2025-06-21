@@ -20,7 +20,7 @@ const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
 app.use((req, res, next) => {
-    const publicPaths = ["/","/api/users/login"];
+    const publicPaths = ["", "/","/api/users/login"];
     const loggedInAs = req.session.role;
 
     if (!loggedInAs && !publicPaths.includes(req.path)) {
