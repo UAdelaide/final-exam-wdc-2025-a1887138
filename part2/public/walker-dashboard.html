@@ -46,7 +46,7 @@
         const user = null;
 
         async function getCurrentUser() {
-          
+          const resp = await fetch('/api/users/me')
         }
 
         async function loadWalkRequests() {
