@@ -174,7 +174,7 @@ section {
 .logout {
     position:relative;
     display: flex;
-    margin-right: auto;
+    margin-right: 0;
 }
 
 .flexy {
