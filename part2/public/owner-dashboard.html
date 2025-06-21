@@ -131,7 +131,9 @@
         async submitLogout() {
           const response = await fetch('api/users/logout', {
             method: 'GET'
-          }).then()
+          }).then(res => {
+            
+          })
         }
       }
     }).mount('#app');
