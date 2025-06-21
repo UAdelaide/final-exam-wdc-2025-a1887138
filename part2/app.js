@@ -23,9 +23,9 @@ app.use((req, res, next) => {
     const publicPaths = ["/","/api/users/login"];
     const loggedInAs = req.session.role;
 
-    if (!loggedInAs) {
+    if (!loggedInAs ) {
         return res.redirect('/');
-    }
+    } else if ()
 });
 
 app.use('/api/walks', walkRoutes);
