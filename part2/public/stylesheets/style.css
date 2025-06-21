@@ -156,6 +156,6 @@ section {
 }
 
 .login-content {
-    display: flex;
-    flex-direction: column;
+    display: block;
+
 }
