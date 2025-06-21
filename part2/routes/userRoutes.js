@@ -52,8 +52,9 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
+    console.log(`ikbeg`);
     const role = rows[0].role;
-    const user = rows[0].role;
+    const user = rows[0].user;
 
     if (role === "walker") {
       console.log("GIVING ROLE WALKER");
