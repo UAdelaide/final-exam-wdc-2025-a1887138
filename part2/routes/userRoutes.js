@@ -79,8 +79,10 @@ router.get('/logout', async (req, res) => {
 
 router.post('/logout', async (req, res) => {
   try {
-    req.session.destroy();
-    res.redirect('/');
+    const [rows] = await db.query(`
+      SELECT user_id, username, role FROM Users
+      WHERE email = ? AND password_hash = ?
+    `, [email, password]);
   } catch (error) {
     console.error(error);
   }
