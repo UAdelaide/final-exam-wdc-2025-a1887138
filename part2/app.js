@@ -23,7 +23,7 @@ app.use((req, res, next) => {
     const publicPaths = ["/","/api/users/login"];
     const loggedInAs = req.session.role;
 
-    if (!loggedInAs)
+    if (!loggedInAs) {}
 });
 
 app.use('/api/walks', walkRoutes);
