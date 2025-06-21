@@ -70,12 +70,11 @@ router.post('/login', async (req, res) => {
 
 router.get('/logout', async (req, res) => {
   try {
-    req.session.destroy;
-
+    req.session.destroy();
+    res.status(200);
   } catch (error) {
-
+    console
   }
-  res.status(200);
 });
 
 module.exports = router;
