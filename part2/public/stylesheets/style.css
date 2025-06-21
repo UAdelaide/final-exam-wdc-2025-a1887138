@@ -172,7 +172,7 @@ section {
 }
 
 .logout {
-    position: relative;
+    position:inherit;
     display: flex;
     top: 0;
     right: 0;
