@@ -77,7 +77,7 @@ router.get('/logout', async (req, res) => {
   }
 });
 
-router.post('/logout', async (req, res) => {
+router.post('/dogs', async (req, res) => {
   const { owner_id } = req.body;
 
   try {
