@@ -55,7 +55,7 @@
           }
         }
 
-                async function getCurrentUser() {
+        async function getCurrentUser() {
           try {
             const resp = await fetch('/api/users/me');
             if (!resp.ok) {
