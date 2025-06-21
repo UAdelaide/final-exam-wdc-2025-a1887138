@@ -54,10 +54,11 @@ router.post('/login', async (req, res) => {
 
     console.log(`ikbeg! ${JSON.stringify(rows)}`);
     const role = rows[0].role;
-    const user = rows[0].user;
+    const user = rows[0].user_id;
 
     if (role === "walker") {
       console.log("GIVING ROLE WALKER");
+      req.session.role = 'walker';
       req.session.role = 'walker';
       console.log(req.session.role);
       res.redirect("/walker-dashboard.html");
