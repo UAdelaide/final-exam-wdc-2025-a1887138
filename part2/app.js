@@ -22,7 +22,9 @@ const userRoutes = require('./routes/userRoutes');
 app.use((req, res, next) => {
     const publicPaths = ["/","/api/users/login"];
 
-    if (publicPaths.includes(req.path))
+    if (publicPaths.includes(req.path) {
+        return;
+    })
 });
 
 app.use('/api/walks', walkRoutes);
