@@ -155,8 +155,9 @@ section {
     display: none;
 }
 
-.login-content label {
+.login-content {
     width: 100%;
+    color: red;
 }
 
 .login-content {
