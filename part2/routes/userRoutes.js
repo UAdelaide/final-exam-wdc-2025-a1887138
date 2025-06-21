@@ -52,6 +52,8 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
+    const role = rows.
+
     console.log(`Role is ${rows.role}`);
     console.log(`Rows is ${JSON.stringify(rows)}`);
 
