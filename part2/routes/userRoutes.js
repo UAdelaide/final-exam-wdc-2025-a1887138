@@ -56,7 +56,9 @@ router.post('/login', async (req, res) => {
       req.session.role = 'walker';
       res.redirect("/walker-dashboard.html");
     } else if (role === "owner") {
+      console.log("GIVING ROLE OWNER");
       req.session.role = 'owner';
+      console.log(`re`);
       res.redirect("/owner-dashboard.html");
     } else {
       res.status(500).json({ error: 'Server Error' });
