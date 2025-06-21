@@ -47,7 +47,9 @@
 
         async function getCurrentUser() {
           const resp = await fetch('/api/users/me')
-          if (!resp.ok)
+          if (!resp.ok) {
+            throw new Error('Failed to load user data')
+          }
         }
 
         async function loadWalkRequests() {
