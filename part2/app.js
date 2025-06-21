@@ -38,6 +38,16 @@ app.use((req, res, next) => {
     return next();
 });
 
+// Route to return dogs as JSON
+app.get('/api/dogs', async (req, res) => {
+  try {
+    const [dogs] = await db.execute('SELECT * FROM Dogs');
+    res.json(dogs);
+  } catch (err) {
+    res.status(500).json({ error: `Failed to fetch dogs with error ${err}` });
+  }
+});
+
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
