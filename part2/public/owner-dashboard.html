@@ -147,7 +147,7 @@
         async getDropdown() {
           const response = await fetch('/api/users/dogs');
           if (!response.ok) {
-            console.error()
+            console.error("There was an error getting dogs!");
           }
         }
       }
