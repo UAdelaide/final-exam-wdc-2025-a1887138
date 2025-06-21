@@ -173,10 +173,13 @@ section {
 
 .logout {
     right: 0;
-    border: solid 2px red;
+}
+
+.logout button [
+        border: solid 2px red;
     color: red;
     background-color: white;
-}
+]
 
 .flexy {
     display: flex;
