@@ -65,7 +65,7 @@
             }
             console.log(resp);
             this.user = await resp.json();
-            console.log(resp);
+            console.log(this.user);
           } catch (err) {
             error.value = err.message;
           }
