@@ -18,6 +18,7 @@
     <form @submit.prevent="submitLogin">
       <div class="login-content">
         <label for="username">Username</label>
+        <!-- v-model is used to bind -->
         <input v-model="email" type="text" name="username" id="username" required>
       </div>
       <div class="login-content">
