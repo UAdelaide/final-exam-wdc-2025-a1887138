@@ -159,5 +159,6 @@ section {
 .login-content {
     width: auto;
     display: flex;
+    margin: 5px;
     flex-direction: column;
 }
