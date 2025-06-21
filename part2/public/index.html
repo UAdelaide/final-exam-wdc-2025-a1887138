@@ -52,7 +52,8 @@
               password: this.password
             }),
             credentials:"include" // Because we will be using cookies !!!
-          });
+          })
+          .then();
           if (!response.ok) {
             console.error('Login failed!')
           }
