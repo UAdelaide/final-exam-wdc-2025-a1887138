@@ -55,7 +55,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/auth', async (req, res, next) => {
+router.post('/auth', async (req, res) => {
     const username = req.body.username;
     console.log(`Body is: ${JSON.stringify(req.body)}`);
     console.log(`Username is: ${username}`);
