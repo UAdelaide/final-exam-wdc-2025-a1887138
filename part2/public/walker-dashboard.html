@@ -64,8 +64,6 @@
               throw new Error('Failed to load user data');
             }
             this.user = await resp.json();
-            console.log(user);
-            console.log("ohegir");
           } catch (err) {
             error.value = err.message;
           }
