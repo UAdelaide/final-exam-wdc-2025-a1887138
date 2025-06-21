@@ -32,6 +32,7 @@ app.use((req, res, next) => {
         return res.redirect(307, '/');
     }
 
+    // Important debug, remove if you dare
     console.log(req.session.role);
 
     return next();
