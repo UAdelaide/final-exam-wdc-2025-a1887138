@@ -73,7 +73,7 @@ router.get('/logout', async (req, res) => {
     req.session.destroy();
     res.status(200);
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
 });
 
