@@ -35,8 +35,8 @@
     const { createApp } = Vue;
     createApp({
       data() {
+        // Init
         return {
-          // Init
           message: 'Welcome to the Dog Walking Service!',
           email: '',
           password: ''
@@ -44,6 +44,7 @@
       },
       methods: {
         async submitLogin() {
+          // Headers must be forced to 
           const response = await fetch('/api/users/login', {
             method: 'POST',
             headers: {'Content-Type':'application/json'},
