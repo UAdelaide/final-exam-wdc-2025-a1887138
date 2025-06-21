@@ -53,7 +53,11 @@
             }),
             credentials:"include" // Because we will be using cookies !!!
           })
-          .then();
+          .then(res => {
+            if (res.redirected) {
+              window.location.
+            }
+          });
           if (!response.ok) {
             console.error('Login failed!')
           }
