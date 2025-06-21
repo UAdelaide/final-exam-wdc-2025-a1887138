@@ -180,4 +180,5 @@ section {
 .reduced-width {
     width: 75%;
     display: flex;
+    margin: 0;
 }
