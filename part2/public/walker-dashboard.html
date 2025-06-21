@@ -46,10 +46,11 @@
         const user = null;
 
         async function getCurrentUser() {
-          const resp = await fetch('/api/users/me')
-          if (!resp.ok) {
-            throw new Error('Failed to load user data')
-          }
+          try {
+            const resp = await fetch('/api/users/me')
+            if (!resp.ok) {
+              throw new Error('Failed to load user data');
+            }
         }
 
         async function loadWalkRequests() {
