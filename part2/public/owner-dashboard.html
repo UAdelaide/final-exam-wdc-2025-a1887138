@@ -145,14 +145,10 @@
         },
 
         async getDropdown() {
-          const response = await fetch('/api/users/dogs', {
-            method: 'POST',
-            headers: {'Content-Type':'application/json'},
-            body: JSON.stringify({
-              user_id: this.session.user_id
-            }),
-            credentials:"include" // Because we will be using cookies !!!
-          })
+          const response = await fetch('/api/users/dogs');
+          if (!response.ok) {
+            
+          }
         }
       }
     }).mount('#app');
