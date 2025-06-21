@@ -71,7 +71,7 @@ router.post('/login', async (req, res) => {
 router.get('/logout', async (req, res) => {
   try {
     req.session.destroy();
-    res.status(200);
+    res.redirect('/');
   } catch (error) {
     console.error(error);
   }
