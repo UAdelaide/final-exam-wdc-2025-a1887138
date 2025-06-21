@@ -47,6 +47,7 @@
 
         async function getCurrentUser() {
           const resp = await fetch('/api/users/me')
+          if (!resp.ok)
         }
 
         async function loadWalkRequests() {
