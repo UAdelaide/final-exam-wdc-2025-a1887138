@@ -164,5 +164,6 @@ section {
 }
 
 .login-content input[type="submit"] {
-    color: blue;
+    color: white;
+    background-color: blue;
 }
