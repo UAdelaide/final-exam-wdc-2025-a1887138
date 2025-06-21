@@ -59,7 +59,7 @@ router.post('/login', async (req, res) => {
     if (role === "walker") {
       console.log("GIVING ROLE WALKER");
       req.session.role = 'walker';
-      req.session.role = 'walker';
+      req.session.user = 'wa;
       console.log(req.session.role);
       res.redirect("/walker-dashboard.html");
     } else if (role === "owner") {
