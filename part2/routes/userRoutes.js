@@ -78,13 +78,13 @@ router.get('/logout', async (req, res) => {
 });
 
 router.post('/logout', async (req, res) => {
-  const { owner_id, email, password, role } = req.body;
+  const { owner_id } = req.body;
 
   try {
     const [rows] = await db.query(`
       SELECT dog_id, name FROM Dogs
-      WHERE owner_id = ? AND password_hash = ?
-    `, [owner_id, password]);
+      WHERE owner_id = ?
+    `, [owner_id]);
   } catch (error) {
     console.error(error);
   }
