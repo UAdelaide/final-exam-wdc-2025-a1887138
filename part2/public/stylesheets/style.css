@@ -164,7 +164,7 @@ section {
 }
 
 .login-content input[type="submit"] {
-    width: 200px;
+    width: 120px;
     color: white;
     background-color: blue;
     border-radius: 5px;
