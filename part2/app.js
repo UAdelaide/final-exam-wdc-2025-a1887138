@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.post('/auth', async (req, res, next) => {
     console.log(`Body is: ${req.body}`);
-    console.log(`Username is: ${req.username}`);
+    console.log(`Username is: ${req.body.username}`);
 });
 
 
