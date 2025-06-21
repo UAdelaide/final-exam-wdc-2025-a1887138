@@ -147,6 +147,7 @@
         async getDropdown() {
           const response = await fetch('/api/users/dogs', {
             method: 'POST',
+            headers: {'Content-Type':'application/json'},
             
           })
         }
