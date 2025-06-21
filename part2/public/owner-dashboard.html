@@ -149,7 +149,7 @@
           if (!response.ok) {
             console.error("There was an error getting dogs!");
           }
-          this.dropdown = await 
+          this.dropdown = await response.json();
         }
       }
     }).mount('#app');
