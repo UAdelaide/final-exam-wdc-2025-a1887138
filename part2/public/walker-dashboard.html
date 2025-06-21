@@ -51,6 +51,10 @@
             if (!resp.ok) {
               throw new Error('Failed to load user data');
             }
+            this.
+          } catch (err) {
+            error.value = err.message;
+          }
         }
 
         async function loadWalkRequests() {
