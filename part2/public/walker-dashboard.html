@@ -75,8 +75,8 @@
         }
 
         onMounted(() => {
-          loadWalkRequests();
           getCurrentUser();
+          loadWalkRequests();
         });
 
         return {
@@ -87,7 +87,7 @@
         };
       },
       methods: {
-        async function getCurrentUser() {
+        async getCurrentUser() {
           try {
             const resp = await fetch('/api/users/me');
             if (!resp.ok) {
