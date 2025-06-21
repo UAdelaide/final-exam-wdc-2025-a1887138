@@ -54,8 +54,7 @@ router.post('/login', async (req, res) => {
 
     const role = rows[0].role;
 
-    console.log(`Role is ${role}`);
-    console.log(`Rows is ${JSON.stringify(rows)}`);
+    
 
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
