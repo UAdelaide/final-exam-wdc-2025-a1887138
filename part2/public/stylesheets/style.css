@@ -165,6 +165,7 @@ section {
 
 .login-content input[type="submit"] {
     max-width: fit-content;
+    background-color: rgb(0, 149, 255);
     color: white;
     border-radius: 5px;
 }
