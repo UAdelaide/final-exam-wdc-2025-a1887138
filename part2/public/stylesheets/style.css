@@ -163,4 +163,6 @@ section {
     flex-direction: column;
 }
 
-.login-content input[type=]
+.login-content input[type="submit"] {
+    color: blue;
+}
