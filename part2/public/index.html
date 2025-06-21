@@ -48,7 +48,7 @@
       },
       methods: {
         async getDogs() {
-          
+          const response = await fetch('/api/dogs')
         }
         async submitLogin() {
           // Headers must be forced to application.json to have the API accept them
