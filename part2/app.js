@@ -8,12 +8,6 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.post('/auth', async (req, res, next) => {
-    const username = req.body.username;
-    console.log(`Body is: ${JSON.stringify(req.body)}`);
-    console.log(`Username is: ${username}`);
-});
-
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
