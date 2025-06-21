@@ -51,7 +51,7 @@
             if (!resp.ok) {
               throw new Error('Failed to load user data');
             }
-            this.
+            this.user = await resp.json();
           } catch (err) {
             error.value = err.message;
           }
