@@ -53,13 +53,14 @@ router.post('/login', async (req, res) => {
     const role = rows[0].role;
 
     if (role === "walker") {
+      console.log("GIVING ROLE WALKER");
       req.session.role = 'walker';
+      console.log(req.session.role);
       res.redirect("/walker-dashboard.html");
     } else if (role === "owner") {
       console.log("GIVING ROLE OWNER");
       req.session.role = 'owner';
       console.log(req.session.role);
-      console.log("GIVING ROLE OWNER");
       res.redirect("/owner-dashboard.html");
     } else {
       res.status(500).json({ error: 'Server Error' });
