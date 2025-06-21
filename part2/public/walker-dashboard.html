@@ -45,7 +45,7 @@
         const error = ref('');
         const user = null;
 
-        async functin loadWalkRequests() {
+        async function loadWalkRequests() {
           try {
             const res = await fetch('/api/walks');
             if (!res.ok) throw new Error('Failed to load walk requests');
