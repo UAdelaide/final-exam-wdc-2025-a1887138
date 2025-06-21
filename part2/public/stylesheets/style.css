@@ -164,9 +164,10 @@ section {
 }
 
 .login-content input[type="submit"] {
+    shad
     max-width: fit-content;
-    background-color: rgb(0, 149, 255);
     color: white;
+    background-color: rgb(0, 149, 255);
     border-color: rgb(0, 149, 255);
     border-radius: 5px;
 }
