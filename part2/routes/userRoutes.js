@@ -78,7 +78,7 @@ router.get('/logout', async (req, res) => {
 });
 
 router.post('/dogs', async (req, res) => {
-  const { owner_id } = req.body;
+  const { owner_id } = req.session.;
 
   try {
     const [rows] = await db.query(`
