@@ -52,7 +52,6 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    console.log(`ikbeg! ${JSON.stringify(rows)}`);
     const role = rows[0].role;
     const user = rows[0].user_id;
 
