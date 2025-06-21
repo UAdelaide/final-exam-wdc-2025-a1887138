@@ -145,7 +145,10 @@
         },
 
         async getDropdown() {
-          const response = await fetch('/api/users/dogs')
+          const response = await fetch('/api/users/dogs', {
+            method: 'POST',
+            
+          })
         }
       }
     }).mount('#app');
