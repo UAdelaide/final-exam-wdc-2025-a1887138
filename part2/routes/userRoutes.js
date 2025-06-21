@@ -59,6 +59,7 @@ router.post('/login', async (req, res) => {
 
     req.session.user = user;
 
+    // find and redirect to appropriate area
     if (role === "walker") {
       req.session.role = 'walker';
       res.redirect("/walker-dashboard.html");
