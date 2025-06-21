@@ -53,6 +53,7 @@ router.post('/login', async (req, res) => {
     }
 
     const role = rows[0].role;
+    const user = rows[0].role;
 
     if (role === "walker") {
       console.log("GIVING ROLE WALKER");
