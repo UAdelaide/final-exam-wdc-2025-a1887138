@@ -59,10 +59,10 @@ router.post('/login', async (req, res) => {
     } else if (role === "ownder") {
       res.redirect("/walker-dashboard.html");
     } else {
-      res.status(500).json({ error: 'Login failed' });
+      res.status(500).json({ error: 'Server Error' });
     }
 
-    res.json({ message: 'Login successful', user: rows[0] });
+    // res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
