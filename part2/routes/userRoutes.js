@@ -55,7 +55,7 @@ router.post('/login', async (req, res) => {
     const role = rows[0].role;
 
     if (role === "waker") {
-      
+      res.redirect("/ow")
     }
 
     res.json({ message: 'Login successful', user: rows[0] });
