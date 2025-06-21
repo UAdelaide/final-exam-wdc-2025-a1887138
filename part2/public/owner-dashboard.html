@@ -29,7 +29,7 @@
             <!-- <input v-model="form.dog_id" type="number" class="form-control" required> -->
              <select v-model="selected">
               <option v-for="item in dropdown" :key="item.dog_id" :value="item.name">
-                {{  }}
+                {{ item.text }}
               </option>
              </select>
           </div>
