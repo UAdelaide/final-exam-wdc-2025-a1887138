@@ -58,7 +58,7 @@
         async function getCurrentUser() {
           try {
             const resp = await fetch('/api/users/me', {
-              
+              credentials:"include"
             });
             if (!resp.ok) {
               throw new Error('Failed to load user data');
