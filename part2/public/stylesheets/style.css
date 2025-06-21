@@ -172,12 +172,12 @@ section {
 }
 
 .logout {
-    position:inherit;
+    position:relative;
     display: flex;
     top: 0;
     right: 0;
 }
 
 .reduced-width {
-    
+    position: absolute;
 }
