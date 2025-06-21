@@ -23,7 +23,8 @@ app.use((req, res, next) => {
     const publicPaths = ["/","/api/users/login"];
     const loggedInAs = req.session.role;
 
-    if (!loggedInAs && req.path) {
+    if (!loggedInAs && !publicPaths.includes(req.path)) {
+        // Not logged in, tried to access a logged in place
         return res.redirect('/');
     } else if ()
 });
