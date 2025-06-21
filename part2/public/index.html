@@ -53,7 +53,9 @@
             }),
             credentials:"include" // Because we will be using cookies !!!
           });
-          if (response !=)
+          if (!response.ok) {
+            console.error('Login failed!')
+          }
         }
       }
     }).mount('#app');
