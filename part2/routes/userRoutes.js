@@ -73,7 +73,7 @@ router.get('/logout', async (req, res) => {
     if (err) {
       console.error(err);
     }
-  })
+  });
 });
 
 module.exports = router;
