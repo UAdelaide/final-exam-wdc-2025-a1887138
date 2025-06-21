@@ -172,9 +172,8 @@ section {
 }
 
 .logout {
-    position:relative;
-    display: flex;
-    margin-right: 0;
+    position: absolute;
+    margin-right: auto;
 }
 
 .flexy {
