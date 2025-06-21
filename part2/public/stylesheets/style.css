@@ -156,10 +156,6 @@ section {
 }
 
 .login-content {
-    width: 100%;
-    background-color: red;
-}
-
-.login-content {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
