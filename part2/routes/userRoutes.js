@@ -69,7 +69,12 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/logout', async (req, res) => {
-  req.session.destroy;
+  try {
+    req.session.destroy;
+
+  } catch (error) {
+
+  }
   res.status(200);
 });
 
