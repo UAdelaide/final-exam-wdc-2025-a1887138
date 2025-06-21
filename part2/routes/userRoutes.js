@@ -30,8 +30,6 @@ router.post('/register', async (req, res) => {
 });
 
 router.get('/me', (req, res) => {
-  console.log(`Over here! ${req.session}`);
-  console.log(`Over here! ${JSON.stringify(req.session)}`);
   if (!req.session.user) {
     return res.status(401).json({ error: 'Not logged in' });
   }
@@ -58,14 +56,10 @@ router.post('/login', async (req, res) => {
     req.session.user = user;
 
     if (role === "walker") {
-      console.log("GIVING ROLE WALKER");
       req.session.role = 'walker';
-      console.log(req.session.role);
       res.redirect("/walker-dashboard.html");
     } else if (role === "owner") {
-      console.log("GIVING ROLE OWNER");
       req.session.role = 'owner';
-      console.log(req.session.role);
       res.redirect("/owner-dashboard.html");
     } else {
       res.status(500).json({ error: 'Server Error' });
